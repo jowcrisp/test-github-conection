@@ -49,7 +49,7 @@ resource "aws_security_group" "test_sg" {
   }
 }
 
-resource "aws_instance" "test_interface" {
+resource "aws_instance" "test_instance" {
   ami           = "ami-0629230e074c580f2"
   instance_type = "t2.micro"
   key_name      = "test-key" 
@@ -70,5 +70,5 @@ resource "aws_instance" "test_interface" {
 }
 
 output "web-address" {
-  value = aws_instance.test_interface.public_dns
+  value = aws_instance.test_instance.public_dns
 }
