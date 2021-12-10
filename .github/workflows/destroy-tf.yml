@@ -29,4 +29,4 @@ jobs:
         
     # Destroy all resources from provider
     - name: Terraform Destroy
-      run: terraform destroy
+      run: terraform destroy -auto-approve
